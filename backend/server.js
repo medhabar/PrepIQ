@@ -15,11 +15,12 @@ const app = express();
 
 // Middleware to handle CORS
 app.use(
-    cors({
-        origin: "*",
-        methods: ["GET", "POST", "PUT", "DELETE"],
-        allowedHeaders: ["Content-Type", "Authorization"],
-    })
+  cors({
+    origin: "https://prep-iq-eight.vercel.app/",
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  }),
 );
 
 connectDB();
